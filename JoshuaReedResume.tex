@@ -1,0 +1,224 @@
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2008 Nathaniel Johnston <nathaniel@nathanieljohnston.com> http://www.nathanieljohnston.com
+% (c) 2011 Scott Clark <sc932@cornell.edu> http://cam.cornell.edu/~sc932
+%
+
+%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,10pt]{article}
+\newlength{\outerbordwidth}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage[svgnames]{xcolor}
+\usepackage{framed}
+\usepackage{tocloft}
+\usepackage{etoolbox}
+\robustify\cftdotfill
+\usepackage{etoolbox,refcount}
+\usepackage{multicol}
+
+%-----------------------------------------------------------
+%Edit these values as you see fit
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+
+%-----------------------------------------------------------
+%Margin setup
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{-0.25in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.75in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{\vspace{-10pt}
+  \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
+    \begin{shaded}
+
+
+   \small
+   \fcolorbox{shadecolor}{shadecolor}{\bf #1}
+
+    \end{shaded}
+  }\vspace{-15pt}
+}
+
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+
+%-----------------------------------------------------------
+\begin{document}
+
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+
+\textbf{\Large Joshua Reed} & \textbf{\today} \\
+ReedJosh@OregonState.edu & 236 NW 8th St. \\
+(971) 275-5001 &  Corvallis, OR\\
+\vspace{-4pt}
+
+\end{tabular*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resheading{Objective}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\vspace{10pt}
+\item[] I'm looking for a three month plus internship starting mid June, 2016--with an implied job offer pending performance and graduation. I particularly want to work with FPGAs, VLSI, Microcontrollers, and work flow tools, but I'm always excited to try something new.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resheading{Education}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+
+\item
+	\ressubheading{Oregon State University}{Corvallis, OR}{Senior Year --B.Sc. Electrical and Computer Engineering}{2012 - Now}
+	\begin{itemize}
+		\resitem{GPA 3.5}
+		\resitem{Focus in Computer Engineering and Digital Design}
+  
+\vspace{-14pt}
+    \begin{multicols}{2}
+    \begin{itemize}{\small
+		    \resitem{Digital Logic Design  ECE 271}
+		    \resitem{Assembly Language ECE 375}
+		    \resitem{Algorithms CS 325}
+            \resitem{Microcontroller System Design ECE 473}
+		    \resitem{Operating Systems CS 311}
+            \resitem{Core ECE Courses}
+		    \resitem{By End of Year: VLSI Design ECE 474 and Computer Architecture ECE 472}
+  }
+  \end{itemize}
+  \end{multicols}
+        
+	\end{itemize}
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resheading{Skills}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+\resitem {{\bf HDL:} Strong with VHDL--Can use Verilog. Modelsim, ActiveHDL, Quartus, and script based automation.}
+
+\resitem {{\bf Development:} Microcontroller System Design, OOP, Algorithms, and Operating System Interaction. Strongest in C/C++, and Python. }
+
+\resitem {{\bf Circuit Design:} Discrete Logic Circuits, Power Supply Concepts, Amplifier Design Basics.}
+
+\resitem {Problem solving} and debugging. Software tool development. Vim, \LaTeX, git, bash, make, etc\dots
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resheading{Internship and Work Experience}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+
+\item
+	\ressubheading{Garmin AT}{Salem, OR}{Design Engineer Intern}{Spring--Summer, 2015}
+	\begin{itemize}
+            \resitem{{\bf Exceeded Goals:} Completed all projects given with better than requested results (per midterm and final performance reviews). }
+            \resitem{{\bf Motivated to Learn:} Learned VHDL 2008 standards and wrote function libraries. }
+	\end{itemize}
+
+\item
+	\ressubheading{Oregon State University}{Corvallis, OR}{Digital Design Lab TA}{Winter--Fall 2015 \& Current}
+	\begin{itemize}
+		\resitem{{\bf Mentor:} Learned through teaching.}
+        \resitem{{\bf Communication:} Conveyed ideas in a way that will be understood.}
+	\end{itemize}
+
+\item
+	\ressubheading{Riverstone Residential}{Portland, OR}{Maintenance Manager}{2010-2013 \& Summer 2014}
+	\begin{itemize}
+		\resitem{{\bf Leadership:} Managed a small team of people to maintain over 300 homes.}
+		\resitem{{\bf Problem Solving:} Every day presented a new challenge to be solved in a timely manner.}
+		\resitem{{\bf Resource Management:} Budgeted for supplies, services, and employees.}
+	\end{itemize}
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resheading{Internship Projects}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+
+\item
+    \ressubheading{Message Reception Logic Reduction}{VHDL, Python, TCL, .do}{Reduce logic in the ADSB next--gen message reception transceiver FPGA}{}
+    \begin{itemize}
+        \resitem{{\bf Management of Complexity:} Utilizing procedures, functions, and generics (VHDL), built abstraction layers facilitating a clean design. }
+        \resitem{{\bf Logic Reduction:} Reduced FPGA logic utilization by $\%60$. }
+        \resitem{{\bf Testing:} Built automated test benches--Designed data generation Python scripts. }
+	\end{itemize}
+
+\item
+    \ressubheading{USB O-Scope Readout Parser}{Python}{Use Python to parse CSV Oscilloscope output to diagnose poor USB signals.}{}
+    \begin{itemize}
+        \resitem{{\bf Demodulation:} Using a state machine design, parses data to data and diagnostics. }
+        \resitem{{\bf Usability:} Output data to file with incremental numbering--Input from directory--Robust CLI. }
+        \resitem{{\bf Visualization:} Cut out dead space and plotted images of message transactions.}
+	\end{itemize}
+
+    \ressubheading{HDL Auto Compilation}{VHDL, Python, .do}{Parse VHDL with Python to generate a top down compilation order. }{}
+    \begin{itemize}
+        \resitem{{\bf Tool Integration:} Built .do scripts (like TCL) to integrate into Aldec Active HDL.}
+        \resitem{{\bf Robust:} Checks libraries and IP directories--Usable with VHDL 2008 standards and prior.}
+        \resitem{{\bf Simplicity:} Enter top file name in script once--Double click to run in future.}
+	\end{itemize}
+
+    \ressubheading{Quad Screen Driver}{PADs, Active HDL, VHDL}{Design a logical signal multiplexing circuit and supply power to the LED back light. }{}
+    \begin{itemize}
+        \resitem{{\bf On Time:} Two week turn around on a project with a lot of firsts for me.}
+        \resitem{{\bf Tool Usage:} Soldered many small parts by hand and used an O-Scope image to prove functionality.}
+	\end{itemize}
+
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resheading{References}
+
+\vspace{10pt}
+    \ressubheading{Marshal Barrett}{{\it Please Email} -- MarshalBarrett@Gmail.Com}{Senior Design Engineer}{Garmin AT}
+
+\vspace{10pt}
+    \ressubheading{Chris Schulte}{(503) 391-3303 -- Chris.Schulte@Garmin.Com--}{New Product Concepts and Innovations Staff Engineer}{Garmin AT}
+
+\vspace{10pt}
+
+    \ressubheading{Matthew Shuman}{(541) 737-1072 -- ShumanM@OregonState.Edu}{Instructor}{Oregon State University}
+
+\vspace{10pt}
+    \ressubheading{Roger Traylor}{(541) 737-2975 -- Traylor@EECS.OregonState.Edu}{Senior Instructor}{Oregon State University}
+
+\vspace{10pt}
+    \ressubheading{Lisa Shoop}{(503) 998-4266 -- {\it Please Call}}{Regional Manager}{Riverstone Residential}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
