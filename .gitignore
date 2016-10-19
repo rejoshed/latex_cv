@@ -3,3 +3,5 @@
 *.out
 *.swp
 *.bak
+*.fdb_latexmk
+*.fls
