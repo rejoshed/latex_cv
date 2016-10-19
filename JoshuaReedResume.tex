@@ -1,33 +1,27 @@
-\documentclass[letterpaper,10pt]{article}
-\pagestyle{empty}
-\raggedbottom
-\raggedright
+\documentclass[margin, line]{res}
+\usepackage{enumitem}
 \usepackage{changepage}
-\usepackage{tocloft}
-\usepackage{etoolbox}
-\robustify\cftdotfill
 \usepackage{multicol}
 \usepackage[most]{tcolorbox}
+\setlength{\textheight}{9.5in} % increase text height to fit on 1-page 
 
 % margins
-\setlength{\evensidemargin}{-0.25in}
-\setlength{\headheight}{-0.25in}
-\setlength{\headsep}{0in}
-\setlength{\oddsidemargin}{-0.25in}
-\setlength{\paperheight}{11in}
-\setlength{\paperwidth}{8.5in}
-\setlength{\tabcolsep}{0in}
-\setlength{\textheight}{9.75in}
-\setlength{\textwidth}{7in}
-\setlength{\topmargin}{-0.3in}
-\setlength{\topskip}{0in}
-\setlength{\voffset}{0.1in}
+%\topmargin=-0.5in
+\oddsidemargin -1.5in
+%\evensidemargin -1.5in
+\textwidth=7.2in
+%\itemsep=0in
+%\parsep=0in
+%\parskip=0in
+
+% don't force fill to right and bottom
+\raggedbottom
+\raggedright
 
 %-----------------------------------------------------------
 % macros
 \newenvironment{smitemize}{
-  \vspace{-3pt}
-  \begin{itemize}
+  \begin{itemize}[nolistsep,noitemsep]
     \setlength{\itemsep}{0pt}
     \setlength{\parskip}{0pt}
     \setlength{\parsep}{0pt}
@@ -35,28 +29,33 @@
   {\end{itemize}}
 
 \newcommand{\resheading}[1]{
-  \vspace{-5pt}
-  \begin{adjustwidth}{-20pt}{0pt} 
-    \begin{tcolorbox}[width=7.2in,
-                      frame hidden,
-                      colback=black!30,
-                      enhanced,
-                      top=0pt,
-                      bottom=0pt,
-                      height=16pt
-                      ]
-        \bf #1
-    \end{tcolorbox}
-  \end{adjustwidth}
-  \vspace{-5pt}
+  \begin{tcolorbox}[width=\textwidth,
+                    frame hidden,
+                    colback=black!30,
+                    enhanced,
+                    top=0pt,
+                    bottom=0pt,
+                    height=16pt
+                    ]
+      \bf #1
+  \end{tcolorbox}
   }
 
 \newcommand{\ressubheading}[4]{
-  \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-    \textbf{#1} &         #2 \\
-    \textit{#3} & \textit{#4} \\
-  \end{tabular*}
+  \begin{minipage}{\textwidth}
+  {\textbf{#1}\hfill #2} \\
+  {\textit{#3}\hfill \textit{#4}}
+  \end{minipage}
+  \rule{\textwidth}{1pt}
   }
+
+\newcommand{\jobdescription}[5]{
+  \begin{minipage}{\textwidth}
+  \ressubheading{#1}{#2}{#3}{#4}
+  \noindent{\textbf{Role:} #5}
+  \end{minipage}
+  }
+
 
 %-----------------------------------------------------------
 
@@ -64,20 +63,18 @@
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
-  \textbf{\Large Joshua Reed} & \textbf{\today} \\
-  ReedJosh@OregonState.edu & 236 NW 8th St. \\
-  (971) 275-5001 &  Corvallis, OR \\
-\end{tabular*}
+\begin{tabbing}
+  \textbf{\Large Joshua Reed} \` \textbf{\today} \\
+  ReedJosh@OregonState.edu    \` 236 NW 8Th St. \\
+  (971) 275-5001              \`  Corvallis, OR \\ 
+\end{tabbing}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{Objective}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-I'm looking for a three month plus internship starting mid 
-June, 2016--with an implied job offer pending performance and graduation. 
-I particularly want to work with FPGAs, VLSI, Microcontrollers, and work 
-flow tools, but I'm always excited to try something new.
+To obtain a full time design, test, or otherwise general engineering position 
+which requires creativity and encourages self advancement. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{Education}
@@ -85,119 +82,132 @@ flow tools, but I'm always excited to try something new.
 
 \ressubheading{Oregon State University}
               {Corvallis, OR}
-              {Senior Year --B.Sc. Electrical and Computer Engineering}
-              {2012 - Now}
-\begin{smitemize}
-  \item{GPA 3.5}
-  \item{Focus in Computer Engineering and Digital Design}
-    \vspace{-15pt}
+              {B.Sc. Electrical and Computer Engineering}
+              {2012 - \textbf{Graduating: June, 2017}}
+\begin{itemize}[nolistsep, noitemsep, topsep=0pt]
+  \item{\bf GPA 3.5}
+  \item{\bf Focus in Computer Engineering and Digital Design} {\it Key Courses Include:}
+    \setlength{\multicolsep}{0pt}
     \begin{multicols}{2}    
-      \begin{smitemize}
-        \item{Digital Logic Design  ECE 271}
-        \item{Assembly Language ECE 375}
-        \item{Algorithms CS 325}
-        \item{Microcontroller System Design ECE 473}
-        \item{Operating Systems CS 311}
-        \item{Core ECE Courses}
-        \item{By End of Year: VLSI Design ECE 474 and Computer Architecture ECE 472}
-      \end{smitemize}
+      \begin{itemize}[nolistsep,noitemsep,topsep=0pt]
+        \item Digital Logic Design  
+        \item Assembly Language 
+        \item Algorithms 
+        \item Microcontroller System Design 
+        \item Operating Systems 
+        \item VLSI and VLSI System Design 
+        \item Computer Architecture 
+      \end{itemize}
     \end{multicols}
-\end{smitemize}
+\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{Skills}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{smitemize}
-    \item {\bf HDL:} Strong with VHDL--Can use Verilog. Modelsim, ActiveHDL, Quartus, and script based automation.
-    \item {\bf Development:} Microcontroller System Design, OOP, Algorithms, and Operating System Interaction. Strongest in C/C++, and Python.
-    \item {\bf Circuit Design:} Discrete Logic Circuits, Power Supply Concepts, Amplifier Design Basics
-    \item Problem solving and debugging. Software tool development. Vim, \LaTeX, git, bash, make, etc\dots
-\end{smitemize}
+\vspace{2mm}
+\begin{adjustwidth}{-10pt}{0pt} 
+  \setlength{\multicolsep}{0pt}
+  \begin{multicols}{2}    
+    \begin{itemize}[nolistsep, noitemsep, topsep=0pt]
+      \item {\bf HDL:} VHDL, Verilog, Modelsim and ActiveHDL Simulators, Quartus II
+      \item {\bf System Design:} Microcontroller, FPGA, Basic Communication Protocols
+      \item {\bf Development \& Productivity Tools:} Microsoft Office Suite, Vim, Latex, Git
+      \item {\bf Software Design:} Object Oriented Programming, Linux System 
+                                   Interaction, C and Python
+      \item {\bf Hardware Design:} Discrete Logic, Transistor Layout Basics, 
+                                   Circuit Design and PCB Layout, Power Supply Concepts
+    \end{itemize}
+  \end{multicols}
+\end{adjustwidth}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{Internship and Work Experience}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\ressubheading{Garmin AT}{Salem, OR}{Design Engineer Intern}{Spring--Summer, 2015}
-\begin{smitemize}
-  \item{{\bf Exceeded Goals:} Completed all projects given with better than requested results (per midterm and final performance reviews). }
-  \item{{\bf Motivated to Learn:} Learned VHDL 2008 standards and wrote function libraries. }
-\end{smitemize}
-
-\ressubheading{Oregon State University}{Corvallis, OR}{Digital Design Lab TA}{Winter--Fall 2015 \& Current}
-\begin{smitemize}
-  \item{{\bf Mentor:} Learned through teaching.}
-  \item{{\bf Communication:} Conveyed ideas in a way that will be understood.}
-\end{smitemize}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\jobdescription{Mentor Graphics}
+              {Wilsonville, OR}
+              {Technical Marketing Engineer Intern}
+              {Summer, 2016 - Current}
+              {As a Technical Marketing Engineer Intern I participated in team meetings 
+and gave occasional presentations. My primary focus was a regression testing program that 
+converted arbitrary graphs to geometric edge-separator pairs for use as input to Mentor's 
+Multi-Patterning tools. Mostly written in Python, this project parsed graph files, generated SVRF and TVF
+scripts and managed process control of external programs. Designed for use in a Linux
+environment, I gained experience interacting with Linux development tools and 
+the operating system itself.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\resheading{Internship Projects}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\jobdescription{Garmin AT}
+              {Salem, OR}
+              {Design Engineer Intern}
+              {Spring \& Summer, 2015}
+{As a Design Engineer Intern at Garmin AT I interacted with a team of 
+four and my team lead on a daily basis. Primarily I worked to redesign a 
+portion of an aerial receiver's HDL that targeted an Altera FPGA. The main goal of
+this redesign was to reduce logic utilization. I achieved a reduction of $60\%$ 
+while also implementing VHDL 2008 constructs to develop cleaner, more extensible code. 
+Other projects included parsing CSV Oscilloscope readings of USB communications, 
+generating a top down compilation order for a large VHDL project using Python 
+and developing a discrete
+logic circuit to multiplex LCD display data. This internship was a period of major growth 
+for me. I gained experience with a larger VHDL project, circuit design and layout, power
+supply design, Visual Basic, Python and Batch scripting and electronics lab tool usage.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\ressubheading{Message Reception Logic Reduction}
-              {VHDL, Python, TCL, .do} 
-              {Reduce logic in the ADSB next--gen message reception transceiver FPGA}
-              {}
-\begin{smitemize}
-  \item {\bf Management of Complexity:} Utilizing procedures, functions, and generics (VHDL), built abstraction layers facilitating a clean design. 
-  \item {\bf Logic Reduction:} Reduced FPGA logic utilization by $\%60$. 
-  \item {\bf Testing:} Built automated test benches--Designed data generation Python scripts. 
-\end{smitemize}
-
-\ressubheading{USB O-Scope Readout Parser}
-              {Python}
-              {Use Python to parse CSV Oscilloscope output to diagnose poor USB signals.}
-              {}
-\begin{smitemize}
-  \item {\bf Demodulation:} Using a state machine design, parses data to data and diagnostics. 
-  \item {\bf Usability:} Output data to file with incremental numbering--Input from directory--Robust CLI. 
-  \item {\bf Visualization:} Cut out dead space and plotted images of message transactions.
-\end{smitemize}
-
-\ressubheading{HDL Auto Compilation}
-              {VHDL, Python, .do}
-              {Parse VHDL with Python to generate a top down compilation order. } 
-              {}
-\begin{smitemize}
-  \item {\bf Tool Integration:} Built .do scripts (like TCL) to integrate into Aldec Active HDL.
-  \item {\bf Robust:} Checks libraries and IP directories--Usable with VHDL 2008 standards and prior.
-  \item {\bf Simplicity:} Enter top file name in script once--Double click to run in future.
-\end{smitemize}
-
-\ressubheading{Quad Screen Driver}
-              {PADs, Active HDL, VHDL}
-              {Logical signal multiplexing circuit and supply power to the LED back light. }
-              {}
-\begin{smitemize}
-  \item {\bf On Time:} Two week turn around on a project with a lot of firsts for me.
-  \item {\bf Tool Usage:} Soldered many small parts by hand and used an O-Scope image to prove functionality.
-\end{smitemize}  
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\jobdescription{Oregon State University}
+               {Corvallis, OR}
+               {Digital Design Lab TA}
+               {Winter, 2015 - Current}
+               {As a teaching assistant I worked directly instructor 
+Matt Shuman to help guide the lab 
+portion of the course. On occasion I developed and lead class lectures,
+managed lab grading and built lab study material. One of
+the larger projects I developed for the course was an FPGA voltmeter which required
+implementation of a SPI communications protocol. I have also worked
+with Roger Traylor and lectured in his VLSI System Design course, though this
+was not an employment arrangement.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\jobdescription{Riverstone Residential}
+               {Portland, OR}
+               {Maintenance Supervisor}
+               {2009 - 2012}
+{As a Maintenance Supervisor at Riverstone Residential I was entrusted with 
+many responsibilities. I managed a team of three people toward the goal of maintaining 
+over 350 homes located within a 20 mile radius. I developed skills in problem 
+solving, communication, time management and leadership.}
+
+
+\resheading{References}
+
+    \ressubheading{Marshal Barrett}
+                  {{\it Please Email} -- MarshalBarrett@Gmail.Com}
+                  {Senior Design Engineer}
+                  {Garmin AT}
+
+    \ressubheading{Chris Schulte}
+                  {(503) 391-3303 -- Chris.Schulte@Garmin.Com--}
+                  {Staff Engineer}
+                  {Garmin AT}
+
+    \ressubheading{Matthew Shuman}
+                  {(541) 737-1072 -- ShumanM@OregonState.Edu}
+                  {Instructor}
+                  {Oregon State University} 
+
+    \ressubheading{Roger Traylor}
+                  {(541) 737-2975 -- Traylor@EECS.OregonState.Edu}
+                  {Senior Instructor}
+                  {Oregon State University}
+
+    \ressubheading{Lisa Shoop}
+                  {(503) 998-4266 -- {\it Please Call}}
+                  {Regional Manager}
+                  {Riverstone Residential}
 \end{document}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%\resheading{References}
-%
-%\vspace{10pt}
-%    \ressubheading{Marshal Barrett}{{\it Please Email} -- MarshalBarrett@Gmail.Com}{Senior Design Engineer}{Garmin AT}
-%
-%\vspace{10pt}
-%    \ressubheading{Chris Schulte}{(503) 391-3303 -- Chris.Schulte@Garmin.Com--}{New Product Concepts and Innovations Staff Engineer}{Garmin AT}
-%
-%\vspace{10pt}
-%
-%    \ressubheading{Matthew Shuman}{(541) 737-1072 -- ShumanM@OregonState.Edu}{Instructor}{Oregon State University}
-%
-%\vspace{10pt}
-%    \ressubheading{Roger Traylor}{(541) 737-2975 -- Traylor@EECS.OregonState.Edu}{Senior Instructor}{Oregon State University}
-%
-%\vspace{10pt}
-%    \ressubheading{Lisa Shoop}{(503) 998-4266 -- {\it Please Call}}{Regional Manager}{Riverstone Residential}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
