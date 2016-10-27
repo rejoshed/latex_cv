@@ -49,6 +49,15 @@
   \rule{\textwidth}{1pt}
   }
 
+\newcommand{\projdescription}[2]{
+  \begin{minipage}{\textwidth}
+  \textbf{#1}
+  \vspace{-2mm} \\
+  \rule{\textwidth}{1pt}
+  {#2}
+  \end{minipage}
+  }
+
 \newcommand{\jobdescription}[5]{
   \begin{minipage}{\textwidth}
   \ressubheading{#1}{#2}{#3}{#4}
@@ -73,9 +82,11 @@
 \resheading{Objective}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-To obtain a full time design, test, or otherwise general engineering position 
-which requires creativity and encourages self advancement. 
-% be more specific per job
+To obtain a full time design or test engineering position 
+which requires creativity and encourages self advancement. An ideal position might 
+include low level programming, scripting for productivity and  hardware or 
+system design or test.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{Education}
@@ -157,7 +168,7 @@ implementation of a SPI communications protocol.}
 \jobdescription{Garmin AT}
               {Salem, OR}
               {Design Engineer Intern}
-              {Spring \& Summer, 2015}
+              {March - September, 2015}
 {As a Design Engineer Intern at Garmin AT I interacted with a team of 
 four and my team lead on a daily basis. Primarily I worked to redesign a 
 portion of an aerial receiver's HDL that targeted an Altera FPGA. The main goal of
@@ -183,11 +194,29 @@ supplies, scheduling of both vendors and employees, maintenance repair requests 
 resident communication. While in this position I developed skills in problem 
 solving, communication, time management and leadership.}
 
+\resheading{Project and Extracurricular Experience}
+
+\projdescription{VLSI System Design}
+                {I worked with instructor Roger Traylor to integrate FPGAs into OSU's 
+VLSI System Design course. This included preparing and delivering two demonstrative 
+lectures, building course assignments and exploring design options. During this process, I
+designed a blinking led pll demo and a sine wave generator which utilized the 
+FPGA's on chip rom.}
+
+\projdescription{Senior Design High Field Pulse Magnet}
+                {Our project met or exceeded initial requirements. I helped
+achieve this goal by designing a voltmeter and voltage warning indicator. For the 
+final prototype I successfully designed and utilized a PCB.}
+
+\projdescription{More Power Amplifier Design}
+                {I implemented a bridged amplifier design to improve upon a USB powered 
+discrete transistor amplifier. To do this I added a unity gain stage to one half of the 
+amplifier, inverting the phase of the original signal.}
 
 \resheading{References}
 
     \ressubheading{Marshal Barrett}
-                  {{\it Please Email} -- MarshalBarrett@gmail.com}
+                  {{(541) 908-6761} -- MarshalBarrett@gmail.com}
                   {Senior Design Engineer}
                   {Garmin AT}
 
