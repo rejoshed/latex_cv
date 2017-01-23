@@ -3,16 +3,11 @@
 \usepackage{changepage}
 \usepackage{multicol}
 \usepackage[most]{tcolorbox}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 \setlength{\textheight}{9.5in} % increase text height to fit on 1-page 
 
-% margins
-%\topmargin=-0.5in
 \oddsidemargin -1.5in
-%\evensidemargin -1.5in
 \textwidth=7.2in
-%\itemsep=0in
-%\parsep=0in
-%\parskip=0in
 
 % don't force fill to right and bottom
 \raggedbottom
@@ -70,65 +65,63 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{tabbing}
-  \textbf{\Large Joshua Reed} \` \textbf{\today} \\
-  ReedJosh@oregonstate.edu    \` 3065 SW 178th Ave. \\
-  (971) 275-5001              \` Beaverton, OR 97003 \\ 
+  \textbf{\Huge {Joshua Reed} }
+            \` {\large (971) 275-5001            }  \\ 
+            \` {\large reedjosh@oregonstate.edu  } 
 \end{tabbing}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Objective}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-To obtain a full time software development or hardware engineering position
-which requires creativity and encourages self development. 
-Ideally this would be in a small collaborative team where I could see the 
-effects of my efforts.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\resheading{Objective}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%To obtain a full time software development or hardware engineering position
+%which requires creativity and encourages self development. 
+%Ideally this would be in a small collaborative team where I could see the 
+%effects of my efforts.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{Education}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tabbing}
+\textbf{ B.Sc. Electrical and Computer Engineering }
+            \` Graduation: June, 2017 \\
+\hspace{1mm} Oregon State Universitry \` Current GPA: 3.45
+\end{tabbing}
+%\begin{itemize}[nolistsep, noitemsep, topsep=0pt]
+%  \item Key Courses Include:
+%    \setlength{\multicolsep}{0pt}
+%    \begin{multicols}{2}    
+%      \begin{itemize}[nolistsep,noitemsep,topsep=0pt]
+%        \item Software Engineering II
+%        \item Digital Logic Design  
+%        \item Assembly Language 
+%        \item Algorithms  I
+%        \item Microcontroller System Design 
+%        \item Operating Systems 
+%        \item VLSI and VLSI System Design 
+%        \item Computer Architecture 
+%      \end{itemize}
+%    \end{multicols}
+%\end{itemize}
 
-\ressubheading{Oregon State University}
-              {Corvallis, OR}
-              {B.Sc. Electrical and Computer Engineering}
-              {2012 - Graduating: June, 2017}
-\begin{itemize}[nolistsep, noitemsep, topsep=0pt]
-  \item{\bf GPA 3.5}
-  \item Key Courses Include:
-    \setlength{\multicolsep}{0pt}
-    \begin{multicols}{2}    
-      \begin{itemize}[nolistsep,noitemsep,topsep=0pt]
-        \item Software Engineering II
-        \item Digital Logic Design  
-        \item Assembly Language 
-        \item Algorithms  I
-        \item Microcontroller System Design 
-        \item Operating Systems 
-        \item VLSI and VLSI System Design 
-        \item Computer Architecture 
-      \end{itemize}
-    \end{multicols}
-\end{itemize}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{Skills}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{2mm}
 \begin{adjustwidth}{-10pt}{0pt} 
   \setlength{\multicolsep}{0pt}
   \begin{multicols}{2}    
     \begin{itemize}[nolistsep, noitemsep, topsep=0pt]
-      \item {\bf Software Design:} Object Oriented Programming, Linux System  
-                                   Interaction, Regular Expressions, C and Python
-      \item {\bf Development \& Productivity Tools:} Microsoft Office Suite, Vim, Latex and Git
-      \item {\bf HDL:} VHDL, Verilog, Modelsim and ActiveHDL Simulators and Altera Quartus II Design Software
-      \item {\bf System Design:} Microcontrollers, FPGAs and Basic Communication Protocols
-      \item {\bf Hardware Design:} Discrete Logic Design, Transistor Layout Basics, 
-                                   Circuit Design, PCB Layout and Power Supply Concepts
+       \item {\bf Software Design:} Object Oriented Programming, Linux System, Interaction, Regular Expressions, C and Python
+       \item {\bf Development and Productivity Tools} Microsoft Office Suite, Vim, \LaTeX and Git
+       \item {\bf HDL} VHDL, Verilog, Modelsim and ActiveHDL Simulators and Altera Quartus II Design Software
+       \item {\bf System Design} Microcontrollers, FPGAs, Basic Communication Protocols
+       \item {\bf Hardware Design} Discrete Logic Design, Transistor Layout Basics, 
+       \item Circuit Design, PCB Layout and Power Supply Concepts
     \end{itemize}
   \end{multicols}
 \end{adjustwidth}
@@ -141,27 +134,27 @@ effects of my efforts.
 \jobdescription{Mentor Graphics}
                {Wilsonville, OR}
                {Technical Marketing Engineer Intern}
-               {July, 2016 - Current}
+               {July - September, 2016}
                {As a Technical Marketing Engineer Intern I participated in team meetings 
 and gave occasional presentations. My primary focus was a regression testing program that 
-converted arbitrary graphs to usable input for Mentor's 
-Calibre tools. Mostly written in Python, this project parsed graph files, generated SVRF and TVF
-scripts and managed process control of external programs. Designed for use in a Linux
-environment, I gained experience interacting with Linux development tools and 
-the operating system itself.} % rewrite to what I did
+converted arbitrary graphs in node neighbor format to usable input for Mentor's Calibre tools.
+Before this project, corner case tests were tediously hand drawn and black box
+random testing was infeasible. This program facilitates these tests and allows Mentor
+to reproduce customer test cases without proprietary customer data. As a result, Mentor's 
+tools are more robust and easier to develop.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \jobdescription{Oregon State University}
                {Corvallis, OR}
-               {Digital Design Lab TA}
-               {March, 2014 - January, 2015 \& September, 2015 - July 2016} % dates
-               {As a teaching assistant I worked directly with instructor 
+               {Digital Design Teaching Assistant}
+               {September, 2015 - July, 2016} % dates
+               {As a Digital Design Teaching Assistant I worked directly with instructor 
 Matt Shuman to help guide the lab 
-portion of the course. On occasion I developed and lead class lectures,
-managed lab grading and built lab study material. One of
-the larger projects I developed for the course was an FPGA voltmeter which required
-implementation of a SPI communications protocol.}
+portion of the course. On occasion I developed and lead lectures,
+managed lab grading, and built lab study material. One of
+the larger projects I developed for the course was an FPGA voltmeter which included 
+a SPI module written in System Verilog.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -175,24 +168,24 @@ portion of an aerial receiver's HDL that targeted an Altera FPGA. The main goal 
 this redesign was to reduce logic utilization. I achieved a reduction of $60\%$ 
 while also implementing VHDL 2008 constructs to develop cleaner, more extensible code. 
 Other projects included parsing CSV Oscilloscope readings of USB communications, 
-generating a top down compilation order for a large VHDL project using Python 
-and developing a discrete % 
-logic circuit to multiplex LCD display data. During this internship I gained experience 
-with a larger VHDL project, circuit design and layout, power
-supply design, Visual Basic, Python and Batch scripting and electronics lab tool usage.}
+automating top down compilation order of VHDL projects using Python,
+and developing a % 
+circuit to multiplex LCD display data. During this internship I gained experience 
+with a large VHDL project, circuit design and layout, power
+supply design, Visual Basic, Python and Batch scripting, and electronics lab tool usage.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\jobdescription{Riverstone Residential}
-               {Portland, OR}
-               {Maintenance Supervisor}
-               {July, 2009 - September, 2012}
-{As a Maintenance Supervisor at Riverstone Residential I managed a team 
-of three people toward the goal of maintaining 
-over 350 homes located within a 10 mile radius. My responsibilities included: ordering
-supplies, scheduling of both vendors and employees, maintenance repair requests and 
-resident communication. While in this position I developed skills in problem 
-solving, communication, time management and leadership.}
+%\jobdescription{Riverstone Residential}
+%               {Portland, OR}
+%               {Maintenance Supervisor}
+%               {July, 2009 - September, 2012}
+%{As a Maintenance Supervisor at Riverstone Residential I managed a team 
+%of three people toward the goal of maintaining 
+%over 350 homes located within a 10 mile radius. My responsibilities included: ordering
+%supplies, scheduling of both vendors and employees, maintenance repair requests and 
+%resident communication. While in this position I developed skills in problem 
+%solving, communication, time management and leadership.}
 
 \resheading{Project and Extracurricular Experience}
 
@@ -208,36 +201,35 @@ FPGA's on chip rom.}
 achieve this goal by designing a voltmeter and voltage warning indicator. For the 
 final prototype I successfully designed and utilized a PCB.}
 
-\projdescription{More Power Amplifier Design}
+\projdescription{Increased Power Amplifier Design}
                 {I implemented a bridged amplifier design to improve upon a USB powered 
 discrete transistor amplifier. To do this I added a unity gain stage to one half of the 
 amplifier, inverting the phase of the original signal.}
 
-\resheading{References}
-
-    \ressubheading{Marshal Barrett}
-                  {{(541) 908-6761} -- MarshalBarrett@gmail.com}
-                  {Senior Design Engineer}
-                  {Garmin AT}
-
-    \ressubheading{Chris Schulte}
-                  {(503) 391-3303 -- Chris.Schulte@garmin.com}
-                  {Staff Engineer}
-                  {Garmin AT}
-
-    \ressubheading{Matthew Shuman}
-                  {(541) 737-1072 -- ShumanM@oregonstate.edu}
-                  {Instructor}
-                  {Oregon State University} 
-
-    \ressubheading{Roger Traylor}
-                  {(541) 737-2975 -- Traylor@eecs.oregonstate.edu}
-                  {Senior Instructor}
-                  {Oregon State University}
-
-    \ressubheading{Lisa Shoop}
-                  {(503) 998-4266 -- {\it Please Call}}
-                  {Regional Manager}
-                  {Riverstone Residential}
+%\resheading{References}
+%
+%    \ressubheading{Marshal Barrett} {{(541) 908-6761} -- MarshalBarrett@gmail.com}
+%                  {Senior Design Engineer}
+%                  {Garmin AT}
+%
+%    \ressubheading{Chris Schulte}
+%                  {(503) 391-3303 -- Chris.Schulte@garmin.com}
+%                  {Staff Engineer}
+%                  {Garmin AT}
+%
+%    \ressubheading{Matthew Shuman}
+%                  {(541) 737-1072 -- ShumanM@oregonstate.edu}
+%                  {Instructor}
+%                  {Oregon State University} 
+%
+%    \ressubheading{Roger Traylor}
+%                  {(541) 737-2975 -- Traylor@eecs.oregonstate.edu}
+%                  {Senior Instructor}
+%                  {Oregon State University}
+%
+%    \ressubheading{Lisa Shoop}
+%                  {(503) 998-4266 -- {\it Please Call}}
+%                  {Regional Manager}
+%                  {Riverstone Residential}
 \end{document}
 
