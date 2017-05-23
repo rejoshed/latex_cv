@@ -1,0 +1,145 @@
+Joshua Reed
+
+  Contact 
+    Cell:  (971)275-5001
+    Email: reedjosh@oregonstate.edu
+
+Education
+
+    B.Sc., Electrical and Computer Engineering
+    Oregon State University 
+    Graduation: June, 2017 
+    Current GPA: 3.47
+
+Experience
+
+    Internship Technical Marketing Engineer
+         Mentor Graphics
+         June--November, 2016
+         -- Created a regression test generation program which converts arbitrary 
+                 graphs in node neighbor format to usable input for Mentor's Calibre tools.
+         -- Reproduced a customer's bug using the test generation program I wrote
+                 without using customer's proprietary data.
+         -- Used the test generation program for black box random and corner case testing.
+
+-- Created a regression test generation program which converts arbitrary 
+    graphs in node neighbor format to usable input for Mentor's Calibre tools.
+-- Reproduced a customer's bug using the test generation program I wrote
+    without using customer's proprietary data.
+-- Used the test generation program for black box random and corner case testing.
+
+Created a regression test generation program which converts arbitrary graphs in node neighbor format to usable input for Mentor's Calibre tools.
+
+Reproduced a customer's bug using the test generation program I wrote without using customer's proprietary data.
+
+Used the test generation program for black box random and corner case testing.
+
+    Digital Design Class & Lab Teaching Assistant
+         Oregon State University
+         Spring, 2016
+         -- Designed volt-meter final lab project framework. This was written in 
+                 System Verilog targeting a Lattice FPGA which communicates with an 
+                 external ADC via SPI.
+         -- Designed and delivered lectures on topics such as Karnaugh maps, registers,
+                 and System Verilog to class of more than 80 students.
+
+
+-- Designed volt-meter final lab project framework. This was written in 
+System Verilog targeting a Lattice FPGA which communicates with an 
+external ADC via SPI.
+-- Designed and delivered lectures on topics such as Karnaugh maps, registers,
+and System Verilog to class of more than 80 students.
+
+    Internship Design Engineer
+         Garmin AT
+         March--September, 2015
+         -- Redesigned an aerial receiver's signal demodulation logic achieving a 
+                 60% reduction of logic usage while implementing new VHDL 
+                 standards to develop cleaner, more abstracted and extensible code.
+         -- Wrote a script which troubleshoots and decodes USB communications given 
+                 voltage readings in CSV format.
+         -- Created a script which generates a top down VHDL project compilation order 
+                 given only the project source files.
+         -- Built a circuit that multiplexes display signals and provides
+                 a controlled current source for the device's backlight.
+
+
+-- Redesigned an aerial receiver's signal demodulation logic achieving a 60% reduction of logic usage while implementing new VHDL standards to develop cleaner, more abstracted and extensible code.
+
+-- Wrote a script which troubleshoots and decodes USB communications given voltage readings in CSV format.
+
+-- Created a script which generates a top down VHDL project compilation order given only the project source files.
+
+-- Built a circuit that multiplexes display signals and provides a controlled current source for the device's backlight.
+
+
+
+    Electrical Fundamentals Teaching Assistant
+         Oregon State University
+         Winter, 2015
+         -- Lectured for weekly recitations on topics such as nodal and mesh 
+                 analysis and Thevenin and Norton equivalencies.
+         -- Created and graded weekly quizzes and practice worksheets.
+
+-- Lectured for weekly recitations on topics such as nodal and mesh 
+        analysis and Thevenin and Norton equivalencies.
+-- Created and graded weekly quizzes and practice worksheets.
+
+    Digital Design Lab Teaching Assistant
+         Oregon State University
+         Fall, 2014
+         -- Guided lab sessions twice per week focusing on topics such as logic
+                 gates, Verilog, and block diagrams.
+         -- Graded all lab projects for the term.
+
+-- Guided lab sessions twice per week focusing on topics such as logic
+    gates, Verilog, and block diagrams.
+-- Graded all lab projects for the term.
+
+    Senior Design High Field Pulse Magnet
+           -- Worked in a three person team to build a high field pulse magnet.
+           -- Pulse magnet successfully generates field pulses in excess of 20 Tesla and 
+                crushes quarters to the size of a dime using this massive magnetic field.
+           -- Responsible for over-sized voltage display, PCB, and safety power indicator.
+    
+    VLSI System Design Course Projects
+           -- Worked with senior instructor Roger Traylor to integrate an Altera FPGA 
+                 into OSU's VLSI System Design coursework.
+           -- Created a PLL LED demo project and lectured on PLL implementation, of which 
+                 the screen-capture is still linked from the course website today.
+           -- Built a sine wave generator utilizing the FPGA's internal rom.
+
+Skills
+
+  Languages
+    Python 
+    C / C++
+    VHDL
+    System Verilog
+    TCL
+    Bash
+    LaTeX
+  Hardware Skills
+    Lab Tool Usage
+    PCB Design
+    Circuit Design
+    FPGA / Microcontroller System Design
+  Software Skills
+    Vim
+    Unix
+    Version Control
+    QA Concepts
+    Command Line Utilities
+    Object Oriented Programming
+  General Skills
+    Troubleshooting 
+    Problem Solving
+    Communication
+    Teamwork
+
+
+
+
+
+Python, C / C++, VHDL, System Verilog, TCL, Bash, LaTeX, Lab Tool Usage, PCB Design, Circuit Design, FPGA / Microcontroller System Design, Vim, Unix, Version Control, QA Concepts, Command Line Utilities, Object Oriented Programming, Troubleshooting, Problem Solving, Communication, Teamwork
+
