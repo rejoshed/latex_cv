@@ -48,24 +48,33 @@
 
 %%% modified by Karol Kozioł for ShareLaTex use
 \RequirePackage[quiet]{fontspec}
-\RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
-
-\newfontfamily\bodyfont
-[BoldFont=texgyreheros-bold.otf,
-ItalicFont=texgyreheros-italic.otf,
-BoldItalicFont=texgyreheros-bolditalic.otf]
-{texgyreheros-regular.otf}
-\newfontfamily\thinfont[]{Roboto-Light.ttf}
-\newfontfamily\headingfont[]{texgyreheros-bold.otf}
+\RequirePackage[]{unicode-math}
 
 \defaultfontfeatures{Mapping=tex-text}
-\setmainfont
-[Mapping=tex-text, Color=textcolor,
-BoldFont=texgyreheros-bold.otf,
-ItalicFont=texgyreheros-italic.otf,
-BoldItalicFont=texgyreheros-bolditalic.otf
-]
-{texgyreheros-regular.otf}
+
+\newfontfamily\bodyfont[
+  Path=/usr/share/texmf-dist/fonts/opentype/public/tex-gyre/, 
+  BoldFont=texgyreheros-bold.otf,
+  ItalicFont=texgyreheros-italic.otf,
+  BoldItalicFont=texgyreheros-bolditalic.otf
+]{texgyreheros-regular.otf}
+
+\newfontfamily\thinfont[
+  Path=/usr/share/texmf-dist/fonts/opentype/google/roboto/,
+  BoldFont=Roboto-Bold.otf,
+  ItalicFont=Roboto-Italic.otf
+]{Roboto-Light.otf}
+
+\newfontfamily\headingfont[
+  Path=/usr/share/texmf-dist/fonts/opentype/public/tex-gyre/
+]{texgyreheros-bold.otf}
+
+\setmainfont[
+  Mapping=tex-text, Color=textcolor,
+  BoldFont=texgyreheros-bold.otf,
+  ItalicFont=texgyreheros-italic.otf,
+  BoldItalicFont=texgyreheros-bolditalic.otf
+]{texgyreheros-regular.otf}
 
 \setmathfont{texgyreheros-regular.otf}
 %%%
@@ -164,14 +173,12 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 \setlength{\TPHorizModule}{1cm}
 \setlength{\TPVertModule}{1cm}
 \newenvironment{aside}{%
-  \let\oldsection\section
-  \renewcommand{\section}[1]{
+  \let\oldsection\section\renewcommand{\section}[1]{
     \par\vspace{\baselineskip}{\Large\headingfont\color{headercolor} ##1}
   }
-  \begin{textblock}{3.6}(1.5, 4.33)
+  \begin{textblock}{3.6} (1.5, 4.33)
   \begin{flushright}
-  \obeycr
-}{%
+  \obeycr}{%
   \restorecr
   \end{flushright}
   \end{textblock}
