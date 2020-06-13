@@ -33,7 +33,6 @@
   \colorlet{purple}{gray}
   \colorlet{red}{gray}
   \colorlet{blue}{gray}
-  \colorlet{fillheader}{white}
   \colorlet{header}{gray}
 \else
   \colorlet{fillheader}{gray}
@@ -127,12 +126,14 @@
 }
 
 \renewcommand{\section}[1]{
+  \vspace{-3mm}
   \par\vspace{\parskip}
   {
     \LARGE\headingfont\color{headercolor}%
     \@sectioncolor #1%
   }
   \par\vspace{\parskip}
+  \vspace{-3mm}
 }
 
 \renewcommand{\subsection}[1]{
@@ -156,25 +157,31 @@
 
 \newcommand{\job}[3]{
   \textbf{#1} \\
-  \vspace{-2mm}
+  \vspace{-3mm}
   \textit{{#2}\hfill#3 \rule{\textwidth}{0.2mm}}
+  \vspace{-6mm}
 }
 
 \newcommand{\project}[1]{
-  \textbf{#1} \\
+  \textbf{#1} \vspace{-2mm}\\
   \rule{\textwidth}{0.2mm}
+  \vspace{-6mm}
 }
 
+\newcommand{\skill}[2]{
+  \section{#1}
+  \\{\bodyfont\color{gray} \footnotesize \em{}Strongest \rightarrow{} Weakest\/}
+  #2
+}
 %%%%%%%%%%%%%%
 % Side block %
 %%%%%%%%%%%%%%
-
 \RequirePackage[absolute,overlay]{textpos}
-\setlength{\TPHorizModule}{1cm}
-\setlength{\TPVertModule}{1cm}
+\setlength{\TPHorizModule}{1.1cm}
+\setlength{\TPVertModule}{1.1cm}
 \newenvironment{aside}{%
   \let\oldsection\section\renewcommand{\section}[1]{
-    \par\vspace{\baselineskip}{\Large\headingfont\color{headercolor} ##1}
+    \par\vspace{\baselineskip}{\large\headingfont\color{headercolor} ##1}
   }
   \begin{textblock}{3.6} (1.5, 4.33)
   \begin{flushright}
@@ -183,12 +190,29 @@
   \end{flushright}
   \end{textblock}
   \let\section\oldsection
+
+
+
 }
 
 
 %%%%%%%%%%%%%%%%
 % Other tweaks %
 %%%%%%%%%%%%%%%%
-
 \RequirePackage[left=6.1cm,top=2cm,right=1.5cm,bottom=0.5cm,nohead,nofoot]{geometry}
-\RequirePackage{hyperref}
+\RequirePackage[colorlinks,allcolors=gray]{hyperref}
+
+% Add uhref.
+\makeatletter
+\newif\ifunderlinehref
+\DeclareRobustCommand{\uhref}{\underlinehreftrue\href}
+\patchcmd{\hyper@link@}
+  {{\Hy@tempb}{#4}}
+  {{\Hy@tempb}{\ifunderlinehref\underline{#4}\else#4\fi}}
+  {}{}
+\apptocmd{\hyper@link@}
+  {\aftergroup\underlinehreffalse}
+  {}{}
+\makeatother
+
+
