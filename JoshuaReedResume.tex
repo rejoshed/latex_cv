@@ -1,148 +1,101 @@
 %!TEX TS-program = xelatex
 \documentclass[]{friggeri-cv}
 
-
-
 \begin{document}
-\header{Joshua}{Reed}
-       {}
-
+\header{Joshua}{Reed}{}
 
 % In the aside, each new line forces a line break
 \begin{aside}
   \section{Contact}
-    \href{tel:19712755001}{(971)275-5001}
-    \href{mailto:reedjosh@oregonstate.edu}{reedjosh@\\oregonstate.edu}
-  \section{Sites}
-    \href{https://github.com/reedjosh}{GitHub: reedjosh}
-    \href{https://leetcode.com/reedjosh/}{LeetCode: reedjosh}
-    \href{https://www.linkedin.com/in/joshuadreed}{LinkedIn: joshuadreed}
-  \section{Languages}
+    \uhref{tel:19712755001}{\underline(971)275-5001}
+    \uhref{mailto:joshuadreed@gmail.com}{joshuadreed@gmail.com}
+ \section{Sites}
+    \uhref{https://github.com/reedjosh}{GitHub: reedjosh}
+    \uhref{https://www.linkedin.com/in/joshuadreed}{LinkedIn: joshuadreed}
+  \skill{Technologies \\ \& Frameworks}
+    \uhref{https://pandas.pydata.org/}{Pandas} \& \uhref{https://github.com/SciRuby/daru}{Daru}
+    \uhref{https://tortoise-orm.readthedocs.io/en/latest/}{ORMs}
+    \uhref{https://graphql.org/}{GraphQL} \& \uhref{https://graphene-python.org/}{Graphene}
+    \uhref{https://swagger.io/}{Rest}
+    \uhref{https://rubyonrails.org}{Rails} \& \uhref{https://fastapi.tiangolo.com/}{FastAPI}
+  \skill{Languages}
     Python 
-    C / C++
-    VHDL
-    System Verilog
+    SQL
+    Ruby
+    Shell
+    noSQL
+    \LaTeX{}
+    C/C++
+    Go
+    JavaScript
     TCL
-    Bash
-    \LaTeX
-  \section{Software \\Skills}
-    Vim
-    Unix
+  \skill{Software Skills}
+    Vim/VSCode
+    Linux
     Version Control
-    QA Concepts
+    TDD \& Coverage
     Command Line Utilities
     Object Oriented Programming
-  \section{Hardware Skills}
-    Lab Tool Usage
-    PCB Design
-    Circuit Design
-    FPGA / Microcontroller System Design
-  \section{General \\ Skills}
-     Troubleshooting 
-     Problem Solving
-     Communication
-     Teamwork
 \end{aside}
 
 
 
-\section{Education}
-\vspace{-2mm}
-
-    \textbf{B.Sc., Electrical and Computer Engineering} \\
-    Oregon State University \\
-    Graduation: June 16, 2017 \\
-    Current GPA: 3.47
-
 \section{Experience}
-\vspace{-2mm}
-
-    \job {Internship Technical Marketing Engineer}
-         {Mentor Graphics}
-         {June--November, 2016}
+\small
+    \job{Software Engineer --- Tapeout Technology Development}
+         {Intel}
+         {2017---Present}
          \begin{itemize}
-           \item Reproduced a customer bug without relying upon customer's proprietary data, \\ and created a test case free from NDA constraints.
-           \item Created a regression test generation program which converts arbitrary 
-                 graphs in node neighbor format to usable input for Mentor's Calibre tools.
-           \item Used the test generation program for black box random and corner case testing.
+           \item Helped build a \uhref{https://fastapi.tiangolo.com}{FastAPI} data API used to abstract old and new automation systems.
+                 Integrated an async Oracle driver and PyODBC connector. Added an async ORM for which I built the Oracle backend (see project below). 
+                 Implemented the GraphQL endpoint. Utilized the combination of GraphQL and the ORM to automate the optimization of SQL queries. 
+                 Built several complicated queries for Rest endpoints. Participated in infrastructure and CI/CD decision making.
+                 {\bf\footnotesize(Python, FastAPI, Pandas, SQL, GraphQL, Tortoise ORM, Swagger, UnixODBC, PostgreSQL)}
+           \item Refactored a Rails \textasciitilde{}10k SLOC website to \textasciitilde{}7k SLOC primarily through 
+                \uhref{https://en.wikipedia.org/wiki/Don%27t_repeat_yourself}{DRYing} up the code and utilizing DataFrames. Used above mentioned DataAPI to 
+                integrate with replacement automation system.
+                 The refactor also included a great deal more logic for new states introduced to the models,
+                 bumped Rails 4\rightarrow{}6, moved from Sprokets to Webpack, included the addition of 
+                 a local MongoDB startup and test script, and added 10s of regression tests where none existed before. {\bf\footnotesize(Ruby, Rails, Mongoid, Mongo, Shell, Javascrit, JQuery)}
+           \item Supported and improved the use model of Electronics Design Automation tools. Included
+                 manipulating UI code to add features and automation previously thought to
+                 be only possible if added as a feature from the external vendor. {\bf\footnotesize(Python, SQL, Pandas, Mongo, TCL\&TK, CalibreMDPV)}
+           \item Built numerous reports and command line and GUI driven automation tools. Integrated divers data sources and 
+                 overcame several barriers to automation including connecting to Sharepoint via Kerberos auth. {\bf\footnotesize(Ruyb, Python, SQL, noSQL, Kerberos, Shell)}
+           \item Part of the transition team to update our software infrastructure accross over 100k hosts. For this I rewrote a batch
+                 processing linux adapter, updated many of our aging repositories, and installed several updated libraries from source.
+           \item Participated in on-call rotation for ops and compute triage.
         \end{itemize}
 
-    \job {Digital Design Class \& Lab Teaching Assistant}
-         {Oregon State University}
-         {Spring, 2016}
+    \job{Internship Technical Marketing Engineer}
+         {Mentor Graphics}
+         {Summer \& Fall, 2016}
          \begin{itemize}
-           \item Designed volt-meter final lab project framework. This was written in 
-                 System Verilog targeting a Lattice FPGA which communicates with an 
-                 external ADC via SPI.
-           \item Designed and delivered lectures on topics such as Karnaugh maps, registers,
-                 and System Verilog to class of more than 80 students.
-         \end{itemize}
+           \item Created a regression test generation program which converts arbitrary 
+                 graphs in node neighbor format to usable input for Mentor's Calibre tools. {\bf\footnotesize(Python, Pandas, Shell, TCL)}
+        \end{itemize}
 
-    \job {Internship Design Engineer}
+    \job{Internship Design Engineer}
          {Garmin AT}
-         {March--September, 2015}
+         {Spring \& Summer, 2015}
          \begin{itemize}
            \item Redesigned an aerial receiver's signal demodulation logic achieving a 
-                 $60\%$ reduction of logic usage while implementing new VHDL 
-                 standards to develop cleaner, more abstracted and extensible code.
-           \item Created a program  which troubleshoots and decodes USB communications given 
-                 voltage readings in CSV format.
-           \item Created a script which generates a top down VHDL project compilation order 
-                 given only the project source files.
-           \item Built a circuit that multiplexes display signals and provides
-                 a controlled current source for the device's backlight.
+                 $60\%$ reduction in FPGA resource utilization. {\bf\footnotesize(VHDL)}
+           \item Built tool that decodes USB voltage readings using a finite state machine algorithm. {\bf\footnotesize(Python)}
+           \item Buitl tool that generates VHDL project compilation order from source files. {\bf\footnotesize(Python)}
          \end{itemize}
 
-    \job {Electrical Fundamentals Teaching Assistant}
-         {Oregon State University}
-         {Winter, 2015}
+\section{Project}  
+    \project{Tortois ORM --- Oracle Backend}
          \begin{itemize}
-           \item Lectured for weekly recitations on topics such as nodal and mesh 
-                 analysis and Thevenin and Norton equivalencies.
-           \item Created and graded weekly quizzes and practice worksheets.
-         \end{itemize}
-
-    \job {Digital Design Lab Teaching Assistant}
-         {Oregon State University}
-         {Fall, 2014}
-         \begin{itemize}
-           \item Guided lab sessions twice per week focusing on topics such as logic
-                 gates, Verilog, and block diagrams.
-           \item Graded all lab projects for the term.
-         \end{itemize}
-
-
-\section{Projects}  
-\vspace{-2mm}
-    \project {C/C++}
-         \begin{itemize}
-           \item \href{https://github.com/reedjosh/small_shell/blob/master/smallsh.c}{\underline{Small Shell} }
-                 a simplified unix shell capable of executing built in and independent \\ commands. 
-           \item \href{https://github.com/reedjosh/arm_microcontroller_radio/blob/master/lab4/lab4.c}{\underline{ARM Microcontroller Based Alarm Clock}}
-                an AT Mega 128 based alarm clock radio featuring, rotary encoder and button controls, seven segment displays, adaptive \\brightness, and more.
+           \item \uhref{https://tortoise-orm.readthedocs.io/en/latest/}{Tortoise ORM} is an asynchronous Object Relationship mapper.
+           \item To design a GraphQL endpoint compatible with async FastAPI that would optimize queries automatically I needed an async ORM.
+                 Unfortunately, I also needed both PostgreSQL and Oracle support. Since the Oracle backend for Tortoise was the only
+                 missing link, I built it. \uhref{https://github.com/reedjosh/tortoise-orm}{My fork} has since been merged into develop.
          \end{itemize} 
 
-    \project {Senior Design High Field Pulse Magnet}
-         \begin{itemize}
-           \item Worked in a three person team to build a high field pulse magnet.
-           \item Pulse magnet successfully generates field pulses in excess of 20 Tesla and 
-                 crushes \\ quarters to the size of a dime using this massive magnetic field.
-           \item Responsible for over-sized voltage display, PCB, and safety power indicator.
-         \end{itemize} 
-    
-
-    \project {VLSI System Design}
-         \begin{itemize}
-           \item Worked with senior instructor Roger Traylor to integrate an Altera FPGA 
-                 into OSU's VLSI System Design coursework.
-           \item Created a PLL LED demo project and lectured on PLL implementation, of which 
-                 the 
-                 \href{https://drive.google.com/file/d/0B_A8ZVw8vDrfZHMtQ0pHdFRmeWM/view}{screen-capture} 
-                 is still linked from the 
-                 \href{http://classes.engr.oregonstate.edu/eecs/spring2016/ece474/}{course website} 
-                today.
-           \item Built a sine wave generator utilizing the FPGA's internal rom.
-         \end{itemize}
-
+\section{Education}
+    \textbf{B.Sc., Electrical and Computer Engineering} \\
+    \textit{{Oregon State University}\hfill 2017 }
 
 \end{document}
