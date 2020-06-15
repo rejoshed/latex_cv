@@ -52,18 +52,18 @@
                  Built several complicated queries for Rest endpoints. Participated in infrastructure and CI/CD decision making.
                  {\bf\footnotesize(Python, FastAPI, Pandas, SQL, GraphQL, Tortoise ORM, Swagger, UnixODBC, PostgreSQL)}
            \item Refactored a Rails \textasciitilde{}10k SLOC website to \textasciitilde{}7k SLOC primarily through 
-                \uhref{https://en.wikipedia.org/wiki/Don%27t_repeat_yourself}{DRYing} up the code and utilizing DataFrames. Used above mentioned DataAPI to 
+                \uhref{https://en.wikipedia.org/wiki/Don%27t_repeat_yourself}{DRYing} up the code and utilizing DataFrames. Used above mentioned Data API to 
                 integrate with replacement automation system.
                  The refactor also included a great deal more logic for new states introduced to the models,
                  bumped Rails 4\rightarrow{}6, moved from Sprokets to Webpack, included the addition of 
-                 a local MongoDB startup and test script, and added 10s of regression tests where none existed before. {\bf\footnotesize(Ruby, Rails, Mongoid, Mongo, Shell, Javascrit, JQuery)}
+                 a local MongoDB startup and test script, and added 10s of regression tests where none existed before. {\bf\footnotesize(Ruby, Rails, Mongoid, Mongo, Shell, Javascript, JQuery)}
            \item Supported and improved the use model of Electronics Design Automation tools. Included
                  manipulating UI code to add features and automation previously thought to
                  be only possible if added as a feature from the external vendor. {\bf\footnotesize(Python, SQL, Pandas, Mongo, TCL\&TK, CalibreMDPV)}
-           \item Built numerous reports and command line and GUI driven automation tools. Integrated divers data sources and 
-                 overcame several barriers to automation including connecting to Sharepoint via Kerberos auth. {\bf\footnotesize(Ruyb, Python, SQL, noSQL, Kerberos, Shell)}
-           \item Part of the transition team to update our software infrastructure accross over 100k hosts. For this I rewrote a batch
-                 processing linux adapter, updated many of our aging repositories, and installed several updated libraries from source.
+           \item Built numerous reports and command line and GUI driven automation tools. Integrated diverse data sources and 
+                 overcame several barriers to automation including connecting to Sharepoint via Kerberos auth. {\bf\footnotesize(Ruby, Python, SQL, noSQL, Kerberos, Shell)}
+           \item Part of the transition team to update our software infrastructure across over 100k hosts. For this I rewrote a batch
+                 processing Linux adapter, updated many of our aging repositories, and installed several updated libraries from source.
            \item Participated in on-call rotation for ops and compute triage.
         \end{itemize}
 
@@ -82,13 +82,13 @@
            \item Redesigned an aerial receiver's signal demodulation logic achieving a 
                  $60\%$ reduction in FPGA resource utilization. {\bf\footnotesize(VHDL)}
            \item Built tool that decodes USB voltage readings using a finite state machine algorithm. {\bf\footnotesize(Python)}
-           \item Buitl tool that generates VHDL project compilation order from source files. {\bf\footnotesize(Python)}
+           \item Built tool that generates VHDL project compilation order from source files. {\bf\footnotesize(Python)}
          \end{itemize}
 
 \section{Project}  
     \project{Tortois ORM --- Oracle Backend}
          \begin{itemize}
-           \item \uhref{https://tortoise-orm.readthedocs.io/en/latest/}{Tortoise ORM} is an asynchronous Object Relationship mapper.
+           \item \uhref{https://tortoise-orm.readthedocs.io/en/latest/}{Tortoise ORM} is an asynchronous Object Relationship Mapper.
            \item To design a GraphQL endpoint compatible with async FastAPI that would optimize queries automatically I needed an async ORM.
                  Unfortunately, I also needed both PostgreSQL and Oracle support. Since the Oracle backend for Tortoise was the only
                  missing link, I built it. \uhref{https://github.com/reedjosh/tortoise-orm}{My fork} has since been merged into develop.
